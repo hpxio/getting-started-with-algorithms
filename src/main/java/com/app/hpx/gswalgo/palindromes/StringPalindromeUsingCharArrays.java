@@ -10,8 +10,8 @@ import java.util.Arrays;
 public class StringPalindromeUsingCharArrays {
 
     private static void isPalindrome(String input) {
-        isPalindromeUsingCharArrayA(input);
-        isPalindromeUsingCharArrayB(input);
+        isPalindromeSolutionA(input);
+        isPalindromeSolutionB(input);
     }
 
     public static void main(String[] args) {
@@ -34,9 +34,8 @@ public class StringPalindromeUsingCharArrays {
      * edge-case:"nurses run", pass:"abccba", pass:"3339091909333"
      * 
      * @param s String to test
-     * @return boolean true if input is Palindrome
      */
-    private static void isPalindromeUsingCharArrayA(String s) {
+    private static void isPalindromeSolutionA(String s) {
         int len = s.length();
         int ctr = len - 1;
 
@@ -63,9 +62,8 @@ public class StringPalindromeUsingCharArrays {
      * edge-case:"nurses run", pass:"abccba", pass:"333 9091 90933 3"
      * 
      * @param s String to test
-     * @return boolean true if input is Palindrome
      */
-    private static void isPalindromeUsingCharArrayB(String s) {
+    private static void isPalindromeSolutionB(String s) {
 
         String orig = s;
 
@@ -85,7 +83,7 @@ public class StringPalindromeUsingCharArrays {
                 result = false;
             }
         }
-        
+
         printArray(inArr);
         System.out.printf("Result : %b for input : %s\n", result, orig);
     }
